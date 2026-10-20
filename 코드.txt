@@ -43,7 +43,8 @@
 <body class="bg-slate-900 min-h-screen flex items-center justify-center p-0 md:p-6 overflow-x-hidden">
 
   <!-- iPhone Frame Container -->
-  <div class="relative w-full max-w-[410px] h-[100vh] md:h-[850px] bg-black md:rounded-[55px] shadow-2xl overflow-hidden border-0 md:border-[10px] border-[#2c2c2e] flex flex-col">
+  div id="lock-screen" class="absolute inset-0 flex flex-col justify-between p-8 text-white z-30 transition-all duration-500 bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('https://pin.it/7wzZy3unG');">
+
     
     <!-- Dynamic Island -->
     <div class="absolute top-3 left-1/2 -translate-x-1/2 w-[120px] h-[35px] bg-black rounded-full z-50 flex items-center justify-between px-3 text-white transition-all duration-300 hover:w-[200px]" id="dynamic-island">
@@ -130,7 +131,7 @@
       </div>
 
       <!-- HOME SCREEN -->
-      <div id="home-screen" class="absolute inset-0 z-10 flex flex-col justify-between p-5 pt-8 bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80');">
+      <div id="home-screen" class="absolute inset-0 z-10 flex flex-col justify-between p-5 pt-8 bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url('https://pin.it/2nJ069jmN');">
         <div class="grid grid-cols-4 gap-y-6 gap-x-3 pt-4">
           <div class="col-span-4 ios-glass rounded-3xl p-4 text-white flex items-center justify-between shadow-lg">
             <div class="flex items-center gap-3">
@@ -138,7 +139,7 @@
               <div>
                 <div class="text-xs font-semibold text-rose-200">박건욱 ❤️ 석매튜</div>
                 <div class="text-lg font-bold">우리 사귄 지 1095일째</div>
-                <div class="text-[11px] text-slate-200">3주년 기념일 ✨</div>
+                <div class="text-[11px] text-slate-200">3주년 ✨</div>
               </div>
             </div>
             <i data-lucide="chevron-right" class="w-5 h-5 opacity-60"></i>
@@ -167,9 +168,8 @@
           </button>
 
           <button onclick="openApp('notes-app')" class="flex flex-col items-center gap-1.5 group">
-            <div class="w-14 h-14 bg-yellow-100 rounded-2xl shadow-md flex items-center justify-center text-amber-600 group-active:scale-90 transition-transform">
-              <i data-lucide="file-text" class="w-7 h-7"></i>
-            </div>
+            <img src="https://pin.it/3PLWcCxSs" class="w-14 h-14 rounded-2xl shadow-md object-cover group-active:scale-90 transition-transform">
+
             <span class="text-[11px] text-white font-medium drop-shadow-sm">메모장</span>
           </button>
         </div>
@@ -184,9 +184,8 @@
             <div class="w-12 h-12 kakao-yellow rounded-2xl shadow-md flex items-center justify-center text-black font-extrabold text-xl group-active:scale-90 transition-transform">톡</div>
           </button>
           <button onclick="openApp('photos-app')" class="flex justify-center group">
-            <div class="w-12 h-12 bg-white rounded-2xl shadow-md flex items-center justify-center text-slate-800 group-active:scale-90 transition-transform">
-              <i data-lucide="camera" class="w-6 h-6"></i>
-            </div>
+<img src="https://pin.it/1jm237wJn" class="w-12 h-12 rounded-2xl shadow-md object-cover group-active:scale-90 transition-transform">
+
           </button>
           <button onclick="openApp('notes-app')" class="flex justify-center group">
             <div class="w-12 h-12 bg-amber-400 rounded-2xl shadow-md flex items-center justify-center text-white group-active:scale-90 transition-transform">
@@ -197,7 +196,8 @@
       </div>
 
       <!-- KAKAOTALK -->
-      <div id="kakao-app" class="absolute inset-0 z-20 bg-slate-100 hidden flex-col">
+      <div id="kakao-app" class="absolute inset-0 z-20 hidden flex-col bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('https://pin.it/m6if51JcR');">
+
         <div class="kakao-bg pt-10 pb-3 px-4 flex items-center justify-between border-b border-slate-300">
           <div class="flex items-center gap-3">
             <button onclick="closeApp('kakao-app')" class="text-slate-700">
@@ -205,7 +205,7 @@
             </button>
             <div class="flex flex-col">
               <span class="font-bold text-sm text-slate-900">My First 🤍</span>
-              <span class="text-[10px] text-slate-600">3주년 사랑꾼 · 석매튜</span>
+              <span class="text-[10px] text-slate-600"> 석매튜</span>
             </div>
           </div>
           <div class="flex items-center gap-3 text-slate-700">
@@ -336,7 +336,7 @@
               <div class="flex items-center gap-3">
                 <div class="w-9 h-9 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-600 text-xs">엄마</div>
                 <div>
-                  <p class="font-semibold text-xs text-slate-800">엄마 ❤️</p>
+                  <p class="font-semibold text-xs text-slate-800">엄마 </p>
                   <p class="text-[10px] text-slate-400">010-1234-5678</p>
                 </div>
               </div>
@@ -346,7 +346,7 @@
               <div class="flex items-center gap-3">
                 <div class="w-9 h-9 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-600 text-xs">아빠</div>
                 <div>
-                  <p class="font-semibold text-xs text-slate-800">아빠 💙</p>
+                  <p class="font-semibold text-xs text-slate-800">아빠 </p>
                   <p class="text-[10px] text-slate-400">010-8765-4321</p>
                 </div>
               </div>
@@ -356,7 +356,7 @@
               <div class="flex items-center gap-3">
                 <div class="w-9 h-9 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-600 text-xs">할머니</div>
                 <div>
-                  <p class="font-semibold text-xs text-slate-800">우리 할머니 👵</p>
+                  <p class="font-semibold text-xs text-slate-800">엉아 </p>
                   <p class="text-[10px] text-slate-400">010-5555-7777</p>
                 </div>
               </div>
@@ -372,7 +372,7 @@
           <button onclick="closeApp('notes-app')">
             <i data-lucide="chevron-left" class="w-6 h-6 text-amber-900"></i>
           </button>
-          <h2 class="font-bold text-base text-amber-900">건욱이의 비밀 메모장</h2>
+          <h2 class="font-bold text-base text-amber-900">메모장</h2>
           <i data-lucide="square-pen" class="w-5 h-5 text-amber-800"></i>
         </div>
 
@@ -381,10 +381,10 @@
             <span class="text-[10px] text-amber-600 font-bold">2026.10.24 · 3주년</span>
             <h3 class="font-bold text-slate-800 text-sm mt-1">매튜 형이랑 3주년 기념 여행 계획 📝</h3>
             <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-              1. 숙소 들어갈 때 매튜 형이 말한 냉장고 음식 정리해두기!<br>
-              2. 3주년 커플링 비밀리에 준비 완료 💍<br>
-              3. 바다 보러 갔을 때 찍은 사진 인화하기.<br>
-              항상 고맙고 사랑하는 매튜 형 🤍
+              1. emp 녹음 7시<br>
+              2. 엠카 대친소 리딩<br>
+              3. 기아 밥주기<br>
+              아.. 석매뜌 보고싶다..
             </p>
           </div>
         </div>
@@ -511,16 +511,16 @@
 
     // Actual Sent Images Encoded & Mapped
     const photosData = [
-      { id: 1, title: '석매튜 셀카 🤍', date: '2026.10.15', url: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80' },
-      { id: 2, title: '거울 셀카 📸', date: '2026.10.02', url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80' },
-      { id: 3, title: '퇴근 후 맥주 한잔 🍺', date: '2026.09.28', url: 'https://images.unsplash.com/photo-1535958636474-b021ee887b13?auto=format&fit=crop&w=600&q=80' },
-      { id: 4, title: '후드 쓰고 귀엽게 ✌️', date: '2026.09.12', url: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=600&q=80' },
-      { id: 5, title: '투샷 거울셀카 🥰', date: '2026.08.30', url: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80' },
-      { id: 6, title: 'LA 여행 추억 ☀️', date: '2026.07.18', url: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80' },
-      { id: 7, title: '바닷가 데이트 🌊', date: '2026.07.17', url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80' },
-      { id: 8, title: '곰인형 끌어안고 🧸', date: '2026.06.05', url: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=600&q=80' },
-      { id: 9, title: '해변 산책 🍹', date: '2026.05.21', url: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80' },
-      { id: 10, title: '눈 내리던 날 ❄️', date: '2026.01.10', url: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=600&q=80' }
+      { id: 1, title: , date: '2026.10.15', url: 'https://pin.it/VYITlQ1nc' },
+      { id: 2, title: , date: '2026.10.02', url: 'https://pin.it/60NLelQwF' },
+      { id: 3, title: , date: '2026.09.28', url: 'https://pin.it/kctpJ8mkG' },
+      { id: 4, title: , date: '2026.09.12', url: 'https://pin.it/5xhJd0Qr3' },
+      { id: 5, title: , date: '2026.08.30', url: 'https://pin.it/1OESH3VRt' },
+      { id: 6, title: , date: '2026.07.18', url: 'https://pin.it/2rnaNCNOI0' },
+      { id: 7, title: , date: '2026.07.17', url: 'https://pin.it/25qE4GEsm' },
+      { id: 8, title: , date: '2026.06.05', url: 'https://pin.it/39KObW67k' },
+      { id: 9, title: , date: '2026.05.21', url: 'https://pin.it/42eS5AO5I' },
+      { id: 10, title: , date: '2026.01.10', url: 'https://pin.it/7wehGLS48' }
     ];
 
     function renderPhotos() {
